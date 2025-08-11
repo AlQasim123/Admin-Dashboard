@@ -10,6 +10,14 @@ ul {
 a {
     text-decoration: none;
 }
+input,
+button {
+    border: none;
+}
+input:focus,
+button:focus {
+    outline: none;
+}
 /* End Global componant */
 /* Start Layout */
 .layout {
@@ -22,6 +30,43 @@ a {
 /* Start Header */
 header {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: #eee;
+    padding: 15px 30px 10px;
+    gap: 20px;
+}
+header section.one,
+header section.two {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+header section.one .search input{
+    padding: 5px 10px;
+    width: 80%;
+    margin-left: 10px;
+    border-radius: 16px;
+}
+header section.one .notify {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    align-items: center;
+}
+header section.two .info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+header section.two button {
+    display: inline-block;
+    margin-left: 30px;
+    background-color: darkred;
+    padding: 10px 20px ;
+    border-radius: 16px;
 }
 /* End Header */
 /* Start sidebar */
