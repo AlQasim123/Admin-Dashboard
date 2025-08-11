@@ -122,12 +122,16 @@ aside {
     align-content: start;
     gap: 50px;
     padding: 15px;
+    background-color: #060606;
+    color: crimson;
 }
-aside li {
+aside a {
+    color: inherit;
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    align-items: center;
     padding: 10px 0;
-}
-aside img {
-    margin-right: 10px;
+    gap: 10px;
 }
 /* End sidebar */
 /* Start main */
