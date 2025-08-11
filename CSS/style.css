@@ -28,16 +28,17 @@ button:focus {
 }
 /* End Global componant */
 /* Start Global Style */
-.ninja {
+.small,
+.big {
     border-radius: 50%;
 }
-.ninja.small {
+.small {
     width: 50px;
     height: 50px;
     min-width: 50px;
     min-height: 50px;
 }
-.ninja.big {
+.big {
     width: 70px;
     height: 70px;
     min-width: 70px;
@@ -46,7 +47,7 @@ button:focus {
 /* End Global Style */
 /* Start Layout */
 .layout {
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
@@ -141,9 +142,16 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 15px;
+    background-color: #070707;
+    color: #dc143c;
+    overflow: auto;
 }
 main h3 {
     margin-bottom: 20px;
+}
+main p {
+    color: darkred;
+    max-width: 32ch;
 }
 main .content .cards {
     display: grid;
@@ -152,18 +160,19 @@ main .content .cards {
 }
 main .content .cards .card {
     height: 200px;
-    background-color: red;
     padding: 20px;
     border-radius: 8px;
     display: grid;
     grid-template-rows: repeat(3, auto);
+    background-color: #000;
+    border-left: 3px solid darkred;
 }
 main .content .card h4 {
     align-self: end;
+    margin-bottom: 5px;
 }
 main .content .card p {
-    max-width: 32ch;
-    align-self: start;
+    font-size: 14px;
 }
 main .content .card .icons {
     align-self: center;
@@ -171,16 +180,29 @@ main .content .card .icons {
 }
 main .content .card .icons img {
     display: inline-block;
-    padding: 10px;
+    margin-right: 10px;
 }
 main .features .feature {
     margin-bottom: 30px;
-    padding: 20px;
+}
+main .features .feature nav {
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+main .features .feature li {
+    padding: 15px 0;
 }
 main .features .feature h5 {
    margin-bottom: 5px; 
 }
 main .features .feature p {
     font-size: 12px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+main .features .one li:not(:last-child) {
+    border-bottom: 1px solid #090909;
 }
 /* End main */
